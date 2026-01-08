@@ -102,6 +102,18 @@ const capitalizeFirstLtr = (str) => {
 Problem 9: Find the Factorial of a Number
 Write a function that calculates the factorial of a number using a loop.
 */
+const factorial = (n) => {
+  if ([0, 1].includes(n)) {
+    return 1;
+  }
+
+  let factorianOfN = 1;
+  for (let i = n; i > 0; i--) {
+    factorianOfN *= i;
+  }
+
+  return factorianOfN;
+};
 
 /*
 Problem 10: PingPong Challenge
@@ -116,7 +128,7 @@ Example Output:
 */
 const pingPong = () => {
   const result = [];
-  
+
   for (let index = 1; index < 21; index++) {
     if (index % 3 === 0 && index % 5 === 0) {
       result.push("PingPong");
@@ -131,5 +143,3 @@ const pingPong = () => {
 
   return result.join(", ");
 };
-
-console.log(pingPong());
