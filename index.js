@@ -97,3 +97,39 @@ const capitalizeFirstLtr = (str) => {
   }
   return newStr.trim();
 };
+
+/*
+Problem 9: Find the Factorial of a Number
+Write a function that calculates the factorial of a number using a loop.
+*/
+
+/*
+Problem 10: PingPong Challenge
+Write a function that prints numbers from 1 to 20.
+Example:
+For multiples of 3, print "Ping"
+For multiples of 5, print "Pong"
+For multiples of both 3 and 5, print "PingPong"
+If the number is not a multiple of 3 or 5, print the number itself
+Example Output:
+1, 2, Ping, 4, Pong, Ping, 7, 8, Ping, Pong, 11, Ping, 13, 14, PingPong, 16 …..
+*/
+const pingPong = () => {
+  const result = [];
+  
+  for (let index = 1; index < 21; index++) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      result.push("PingPong");
+    } else if (index % 3 === 0) {
+      result.push("Ping");
+    } else if (index % 5 === 0) {
+      result.push("Pong");
+    } else {
+      result.push(index);
+    }
+  }
+
+  return result.join(", ");
+};
+
+console.log(pingPong());
