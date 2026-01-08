@@ -71,3 +71,12 @@ const sumOfNums = (arrOfNums) => {
   return sum;
 };
 
+/*
+Problem 7: Find Even Numbers in an Array
+Write a function that returns all even numbers from a given array.
+*/
+const findEvens = (arrOfNums) => {
+  const arrOfEvens = arrOfNums.filter((num) => num % 2 === 0);
+  return arrOfEvens;
+};
+
