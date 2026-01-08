@@ -38,3 +38,15 @@ const isPalinDrome = (string) => {
   return false;
 };
 
+/*
+Problem 4: Find the Maximum Number
+Write a function that takes an array of numbers and returns the largest number.
+*/
+const largestNum = (arrOfNum) => {
+  let highestNum = 0;
+  for (const num of arrOfNum) {
+    if (num > highestNum) highestNum = num;
+  }
+  return highestNum;
+};
+
