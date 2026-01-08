@@ -60,3 +60,14 @@ const removeDuplicate = (arr) => {
 
   return newArr;
 };
+
+/*
+Problem 6: Sum of All Numbers in an Array
+Write a function that returns the sum of all numbers in an array.
+*/
+
+const sumOfNums = (arrOfNums) => {
+  const sum = arrOfNums.reduce((total, num) => total + num, 0);
+  return sum;
+};
+
