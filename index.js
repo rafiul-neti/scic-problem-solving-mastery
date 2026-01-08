@@ -80,3 +80,20 @@ const findEvens = (arrOfNums) => {
   return arrOfEvens;
 };
 
+/*
+Problem 8: Capitalize First Letter of Each Word
+Write a function that capitalizes the first letter of each word in a string.
+*/
+const capitalizeFirstLtr = (str) => {
+  const arrOfWords = str.split(" ");
+
+  let newStr = "";
+  for (const word of arrOfWords) {
+    const firstLtr = word.slice(0, 1).toUpperCase();
+    const restLtrs = word.slice(1);
+    const wordWithCapLtr = firstLtr + restLtrs;
+
+    newStr = newStr + " " + wordWithCapLtr;
+  }
+  return newStr.trim();
+};
