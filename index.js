@@ -21,8 +21,20 @@ const countVowels = (string) => {
   const vowels = ["a", "i", "o", "u", "e"];
   let count = 0;
   for (const vowel of string.split("")) {
-    if (vowels.includes(vowel)) count++;
+    if (vowels.includes(vowel.toLowerCase())) count++;
   }
 
   return count;
 };
+
+/*
+Problem 3: Check for Palindrome
+Write a function that checks if a string is a palindrome (reads the same forward and backward).
+*/
+const isPalinDrome = (string) => {
+  const reversed = reverseString(string);
+  if (string === reversed) return true;
+
+  return false;
+};
+
