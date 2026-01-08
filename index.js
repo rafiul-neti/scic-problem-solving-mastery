@@ -50,3 +50,13 @@ const largestNum = (arrOfNum) => {
   return highestNum;
 };
 
+/*
+Problem 5: Remove Duplicates from an Array
+Write a function that removes all duplicate numbers from an array.
+*/
+
+const removeDuplicate = (arr) => {
+  const newArr = [...new Set(arr)].sort((a, b) => a - b);
+
+  return newArr;
+};
